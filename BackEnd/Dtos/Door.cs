@@ -2,6 +2,6 @@ namespace BackEnd.Dtos;
 
 public class Door
 {
-    public bool IsPrize = false;
+    public bool IsCar = false;
     public bool IsSelected = false;
 }

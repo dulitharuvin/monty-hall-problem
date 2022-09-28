@@ -2,12 +2,12 @@ namespace BackEnd.Dtos
 {
     public class SimulationsResult
     {
-        int NumberOfWins { get; set; }
+        public int NumberOfWins { get; set; }
 
-        int NumberOfLoses { get; set; }
+        public int NumberOfLoses { get; set; }
 
-        int NumerOfSimulations { get; set; }
+        public int NumerOfSimulations { get; set; }
 
-        decimal WinRatio { get; set; }
+        public decimal WinRatio { get; set; }
     }
 }
