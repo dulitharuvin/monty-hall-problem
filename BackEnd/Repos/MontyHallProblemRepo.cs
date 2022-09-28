@@ -14,7 +14,7 @@ namespace BackEnd.Repos
 
         public object GetSimulationResults(UserInput userInput)
         {
-            throw new NotImplementedException();
+            return "Test Done";
         }
     }
 }
