@@ -15,8 +15,8 @@ namespace BackEnd.Controllers
             _repository = repository;
         }
 
-        [HttpGet]
-        public ActionResult<object> GetSimulationResults([FromQuery] UserInput userInput)
+        [HttpPost]
+        public ActionResult<SimulationsResult> GetSimulationResults([FromBody] UserInput userInput)
         {            
             return _repository.GetSimulationResults(userInput);
         }

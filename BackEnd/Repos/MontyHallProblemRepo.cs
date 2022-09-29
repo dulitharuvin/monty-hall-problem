@@ -12,7 +12,7 @@ namespace BackEnd.Repos
             _context = context;
         }
 
-        public object GetSimulationResults(UserInput userInput)
+        public SimulationsResult GetSimulationResults(UserInput userInput)
         {
             Random rand = new Random();
 

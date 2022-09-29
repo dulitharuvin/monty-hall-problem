@@ -4,6 +4,6 @@ namespace BackEnd.Repos
 {
     public interface IMontyHallProblemRepo
     {
-        object GetSimulationResults(UserInput userInput);
+        SimulationsResult GetSimulationResults(UserInput userInput);
     }
 }
