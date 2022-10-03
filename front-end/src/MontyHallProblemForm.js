@@ -1,4 +1,5 @@
-import * as React from "react";
+import axios from "axios";
+import React, { useState } from "react";
 
 const MontyHallProblem = (props) => {
   const INITIAL_STATE = {
@@ -6,35 +7,45 @@ const MontyHallProblem = (props) => {
     changeSelectedDoor: "false",
   };
 
-  const [form, setForm] = React.useState(INITIAL_STATE);
+  const [form, setForm] = useState(INITIAL_STATE);
+  const [simulationResult, setSimulationResult] = useState({});
 
   const handleChange = (event) => {
     setForm({
       ...form,
       [event.target.name]: event.target.value,
     });
-    console.log(form);
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    alert(form.numberOfSimulations + " " + form.changeSelectedDoor);
-
+    axios
+      .post("http://localhost:5000/api/montyhallproblem", {
+        ...form,
+        changeSelectedDoor: form.changeSelectedDoor === "true",
+      })
+      .then((result) => {
+        setSimulationResult(result.data);
+        console.log(result);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
     setForm(INITIAL_STATE);
   };
 
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <label>
-          Number of Games to simulate :
+        <div>
+          <label>Number of Games to simulate :</label>
           <input
             type="text"
             name="numberOfSimulations"
             onChange={handleChange}
             value={form.numberOfSimulations}
           />
-        </label>
+        </div>
         <div>
           <input
             type="radio"

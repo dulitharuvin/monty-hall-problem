@@ -1,5 +1,6 @@
 using BackEnd.Dtos;
 using BackEnd.Repos;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BackEnd.Controllers
@@ -17,7 +18,7 @@ namespace BackEnd.Controllers
 
         [HttpPost]
         public ActionResult<SimulationsResult> GetSimulationResults([FromBody] UserInput userInput)
-        {            
+        {
             return _repository.GetSimulationResults(userInput);
         }
     }
