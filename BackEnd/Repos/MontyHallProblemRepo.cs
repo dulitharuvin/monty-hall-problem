@@ -30,7 +30,6 @@ namespace BackEnd.Repos
                 NumberOfWins = winCounter,
                 NumberOfLoses = Math.Abs(userInput.NumberOfSimulations - winCounter),
                 NumerOfSimulations = userInput.NumberOfSimulations,
-                // WinRatio = (winCounter / userInput.NumberOfSimulations)
                 WinRatio = decimal.Divide(winCounter, userInput.NumberOfSimulations) * 100
             };
             return results;
