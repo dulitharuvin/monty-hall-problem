@@ -1,5 +1,5 @@
-using BackEnd.Dtos;
-using BackEnd.Repos;
+using BackEnd.Api.Dtos;
+using BackEnd.Api.Repos;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 

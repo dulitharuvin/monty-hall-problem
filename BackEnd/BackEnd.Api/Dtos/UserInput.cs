@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace BackEnd.Dtos
+namespace BackEnd.Api.Dtos
 {
     public class UserInput
     {

@@ -1,7 +1,7 @@
-using BackEnd.Data;
-using BackEnd.Dtos;
+using BackEnd.Api.Data;
+using BackEnd.Api.Dtos;
 
-namespace BackEnd.Repos
+namespace BackEnd.Api.Repos
 {
     public class MontyHallProblemRepo : IMontyHallProblemRepo
     {

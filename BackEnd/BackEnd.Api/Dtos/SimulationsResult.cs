@@ -1,4 +1,4 @@
-namespace BackEnd.Dtos
+namespace BackEnd.Api.Dtos
 {
     public class SimulationsResult
     {

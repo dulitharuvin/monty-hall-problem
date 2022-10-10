@@ -1,6 +1,6 @@
-using BackEnd.Dtos;
+using BackEnd.Api.Dtos;
 
-namespace BackEnd.Repos
+namespace BackEnd.Api.Repos
 {
     public interface IMontyHallProblemRepo
     {
