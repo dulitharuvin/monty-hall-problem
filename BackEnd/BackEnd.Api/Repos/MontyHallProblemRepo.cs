@@ -5,11 +5,8 @@ namespace BackEnd.Api.Repos
 {
     public class MontyHallProblemRepo : IMontyHallProblemRepo
     {
-        private readonly AppDbContext _context;
-
-        public MontyHallProblemRepo(AppDbContext context)
+        public MontyHallProblemRepo()
         {
-            _context = context;
         }
 
         public async Task<SimulationsResult> GetSimulationResults(UserInput userInput)
