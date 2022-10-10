@@ -17,9 +17,14 @@ namespace BackEnd.Api.Controllers
         }
 
         [HttpPost]
-        public ActionResult<SimulationsResult> GetSimulationResults([FromBody] UserInput userInput)
+        public async Task<IActionResult> GetSimulationResults([FromBody] UserInput userInput)
         {
-            return _repository.GetSimulationResults(userInput);
+            var results = await _repository.GetSimulationResults(userInput);
+            if (results == null)
+            {
+                return NoContent();
+            }
+            return Ok(results);
         }
     }
 }
