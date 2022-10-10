@@ -5,15 +5,14 @@ namespace BackEnd.Api.Repos
 {
     public class MontyHallProblemRepo : IMontyHallProblemRepo
     {
-        private readonly AppDbContext _context;
-
-        public MontyHallProblemRepo(AppDbContext context)
+        public MontyHallProblemRepo()
         {
-            _context = context;
         }
 
-        public SimulationsResult GetSimulationResults(UserInput userInput)
+        public async Task<SimulationsResult> GetSimulationResults(UserInput userInput)
         {
+            if (userInput == null || userInput.NumberOfSimulations == 0) return null;
+
             Random rand = new Random();
 
             int winCounter = 0;
