@@ -45,5 +45,20 @@ namespace ackEnd.Tests.Systems.Controllers
             // /// Assert
             result.StatusCode.Should().Be(204);
         }
+
+        [Fact]
+        public async Task GetSimulationResults_ShouldCallRepoGetSimulationResultsOnce()
+        {
+            ///Arrange
+            var repository = new Mock<IMontyHallProblemRepo>();
+            var userInput = MontyHallProblemMockData.GetUserInput();
+            var sut = new MontyHallProblemController(repository.Object);
+
+            ///Act
+            var result = await sut.GetSimulationResults(userInput);
+
+            ///Assert
+            repository.Verify(_ => _.GetSimulationResults(userInput), Times.Exactly(1));
+        }
     }
 }
