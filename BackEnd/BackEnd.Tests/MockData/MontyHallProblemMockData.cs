@@ -16,7 +16,7 @@ public class MontyHallProblemMockData
         };
     }
 
-    public static SimulationsResult GetSimulationsResultAsNull()
+    public static SimulationsResult? GetSimulationsResultAsNull()
     {
         return null;
     }
