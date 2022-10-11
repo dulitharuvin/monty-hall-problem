@@ -4,6 +4,6 @@ namespace BackEnd.Api.Repos
 {
     public interface IMontyHallProblemRepo
     {
-        Task<SimulationsResult> GetSimulationResults(UserInput userInput);
+        Task<SimulationsResult?> GetSimulationResults(UserInput userInput);
     }
 }
