@@ -9,7 +9,7 @@ namespace BackEnd.Api.Repos
         {
         }
 
-        public async Task<SimulationsResult> GetSimulationResults(UserInput userInput)
+        public async Task<SimulationsResult?> GetSimulationResults(UserInput userInput)
         {
             if (userInput == null || userInput.NumberOfSimulations == 0) return null;
 
