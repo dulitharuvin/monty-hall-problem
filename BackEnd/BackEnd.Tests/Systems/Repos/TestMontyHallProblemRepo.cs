@@ -21,7 +21,7 @@ namespace ackEnd.Tests.Systems.Repos
             var result = await sut.GetSimulationResults(userInput);
 
             // /// Assert
-            result.GetType().Should().Be(typeof(SimulationsResult));
+            result?.GetType().Should().Be(typeof(SimulationsResult));
         }
     }
 }
